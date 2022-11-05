@@ -5,7 +5,11 @@ const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const xss = require('xss-clean');
 const hpp = require('hpp');
+
 const AppError = require('./utils/appError');
+const globalErrorHandler = require('./controllers/errorController');
+const apiStatusRoute = require('./routes/apiStatusRoute');
+const cardprocessRoute = require('./routes/creditCardProcessRoute');
 
 const app = express();
 app.use(helmet());
@@ -40,8 +44,13 @@ app.use(cors());
 app.use(xss());
 app.use(hpp());
 
+app.use('/', apiStatusRoute);
+app.use('/api/v1/cardprocess', cardprocessRoute);
+
 app.all('*', (req, res, next) => {
   next(new AppError(`can't find ${req.originalUrl} on server`, 400));
 });
+
+app.use(globalErrorHandler);
 
 module.exports = app;
