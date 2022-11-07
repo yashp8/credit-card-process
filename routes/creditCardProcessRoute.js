@@ -6,8 +6,6 @@ const router = express.Router();
 router
   .route('/')
   .get(creditCardProcess.getCards)
-  .post(
-    creditCardProcess.createCard,
-  );
+  .post(creditCardProcess.isValidCard, creditCardProcess.isCardExist,creditCardProcess.createCard);
 
-  module.exports = router;
+module.exports = router;

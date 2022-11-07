@@ -8,7 +8,8 @@
     "dev": "nodemon server.js",
     "start:dev": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",
-    "run:prod": "NODE_ENV=production node server.js"
+    "run:prod": "NODE_ENV=production node server.js",
+    "test": "jest --watch *.test.js"
   },
   "author": "git:yashp8",
   "license": "ISC",
@@ -20,7 +21,11 @@
     "express-rate-limit": "^6.6.0",
     "helmet": "^6.0.0",
     "hpp": "^0.2.3",
+    "jest": "^29.2.2",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.1",
+    "uuid": "^9.0.0",
     "xss-clean": "^0.1.1"
   },
   "devDependencies": {
