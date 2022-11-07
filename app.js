@@ -10,6 +10,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const apiStatusRoute = require('./routes/apiStatusRoute');
 const cardprocessRoute = require('./routes/creditCardProcessRoute');
+const cardpTypeRoute = require('./routes/cardTypeRoute');
 
 const app = express();
 app.use(helmet());
@@ -45,7 +46,8 @@ app.use(xss());
 app.use(hpp());
 
 app.use('/', apiStatusRoute);
-app.use('/api/v1/cardprocess', cardprocessRoute);
+app.use('/api/v1/card-process', cardprocessRoute);
+app.use('/api/v1/card-type', cardpTypeRoute);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`can't find ${req.originalUrl} on server`, 400));
