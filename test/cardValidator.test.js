@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const cardValidator = require('./cardValidator');
+const cardValidator = require('../utils/cardValidator');
 
 const dbMockMaster = ['5553 0422 4198 4105', '5555 5537 5304 8194'];
 const dbMockVisa = ['4012 8888 8888 1881'];
