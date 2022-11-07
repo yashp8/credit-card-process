@@ -23,4 +23,4 @@ http://localhost:3001/api/v1/card-process | POST
 }
 ```
 
-http://localhost:3001/api/v1/cardType/{Card Number} e.g.: 5105105105105100 | GET
+http://localhost:3001/api/v1/card-type/{CardNumber} e.g.: 5105105105105100 | GET
