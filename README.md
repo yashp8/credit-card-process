@@ -11,8 +11,8 @@ In the project directory, you can run:
 
 API ROUTES
 
-http://localhost:3001/api/v1/cardprocess | GET \
-http://localhost:3001/api/v1/cardprocess | POST 
+http://localhost:3001/api/v1/card-process | GET \
+http://localhost:3001/api/v1/card-process | POST 
 ```sh
 {
     "id": null,
@@ -22,3 +22,5 @@ http://localhost:3001/api/v1/cardprocess | POST
     "limit": 1500
 }
 ```
+
+http://localhost:3001/api/v1/cardType/{Card Number} e.g.: 5105105105105100 | GET
